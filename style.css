@@ -555,3 +555,101 @@ img {
     height: 80px;
     
 }
+
+
+/* ==========================================================
+   CONFIGURAÇÃO DE IMPRESSÃO / PDF (REGRAS EXATAS DO SEU HTML)
+   ========================================================== */
+@media print {
+    /* 1. Oculta tudo o que é controle e navegação */
+    .navbar, 
+    .filter-bar, 
+    .actions, 
+    .item-check, 
+    .qty-input, 
+    .unit-price-input, 
+    .price-prefix,
+    .filter-chip,
+    .calc-inputs,
+    .divider,
+    .summary-row {
+        display: none !important;
+    }
+
+    /* 2. Reseta o layout para fluxo vertical limpo */
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* 3. Posiciona a Sidebar no TOPO do PDF */
+    .sidebar {
+        position: static !important;
+        width: 100% !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+        order: -1 !important; /* Move para o início da página */
+    }
+
+    .summary-card {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Esconde o título 'Resumo Financeiro' para focar no Índice */
+    .summary-card > h2 {
+        display: none !important;
+    }
+
+    /* 4. EXIBE O ÍNDICE DE ACESSIBILIDADE E O VALOR FINAL NO TOPO */
+    .accessibility-card {
+        display: block !important;
+        border: 2px solid #2563eb !important;
+        background: #f8fafc !important;
+        padding: 1rem !important;
+        border-radius: 8px !important;
+        margin-bottom: 1rem !important;
+        page-break-inside: avoid;
+    }
+
+    .total-box {
+        display: block !important;
+        background: #0f172a !important;
+        color: #ffffff !important;
+        padding: 0.75rem !important;
+        border-radius: 8px !important;
+        margin-bottom: 1.5rem !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 5. FILTRAGEM DOS SERVIÇOS SELECIONADOS */
+    
+    /* Esconde as linhas dos itens que NÃO foram marcados */
+    .item-row:has(input[type="checkbox"]:not(:checked)) {
+        display: none !important;
+    }
+
+    /* Esconde os Cards de Categoria inteiros que NÃO possuem nenhum item selecionado */
+    #services-container .card:not(:has(input[type="checkbox"]:checked)) {
+        display: none !important;
+    }
+
+    /* Estilização básica dos cards impressos */
+    #services-container .card {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+        margin-bottom: 1rem !important;
+        page-break-inside: avoid;
+    }
+}
