@@ -28,7 +28,7 @@ const initialData = [
     { id: 22, category: "3.0 COMUNICAÇÃO E DIVULGAÇÃO", name: "E-mail marketing", badge: "RECOMENDADO", badge_class: "recomendado", selected: false, unit: "Hora", unit_price: 180.0, qty: 0, description: "Disparos de e-mail com HTML acessível a leitores de tela." },
     { id: 23, category: "3.0 COMUNICAÇÃO E DIVULGAÇÃO", name: "Plataforma de inscrições acessível", badge: "RECOMENDADO", badge_class: "recomendado", selected: false, unit: "Hora", unit_price: 220.0, qty: 0, description: "Formulários e bilheteria digital sem barreiras de navegação." },
     { id: 24, category: "3.0 COMUNICAÇÃO E DIVULGAÇÃO", name: "Busca ativa de públicos-alvo", badge: "PREMIUM", badge_class: "premium", selected: false, unit: "Hora", unit_price: 180.0, qty: 0, description: "Mapeamento e engajamento direto com comunidades de pessoas com deficiência." },
-    { id: 88, category: "3.0 COMUNICAÇÃO E DIVULGAÇÃO", name: "Plug-in de Assistividade", badge: "ESSENCIAL", badge_class: "essencial", selected: false, unit: "Hora", unit_price: 180.0, qty: 0, description: "Assitividade em Sites"},
+    { id: 88, category: "3.0 COMUNICAÇÃO E DIVULGAÇÃO", name: "Plug-in de Assistividade", badge: "ESSENCIAL", badge_class: "essencial", selected: false, unit: "Hora", unit_price: 180.0, qty: 0, description: "Assitividade em Sites" },
 
     // 4.0 INFRAESTRUTURA FÍSICA
     { id: 25, category: "4.0 INFRAESTRUTURA FÍSICA", name: "Cenografia e ambientação (criação)", badge: "RECOMENDADO", badge_class: "recomendado", selected: false, unit: "Hora", unit_price: 250.0, qty: 0, description: "Design de ambientes focando em livre circulação e conforto sensorial." },
